@@ -11,6 +11,27 @@ A simple Chromium extension to copy Jira ticket numbers as embedded markdown lin
 
 ## Installation
 
+1. **Download the latest release**:
+   - Go to the [Releases page](https://github.com/Victor-IX/md-jira-number/releases)
+   - Download the latest `md-jira-number-vX.X.X.zip` file
+
+2. **Extract the archive**:
+   - Extract the ZIP file to a folder on your computer
+   - Remember this location (you'll need to keep the files there)
+
+3. **Load the extension in Chrome/Edge**:
+   - Open `chrome://extensions/` (or `edge://extensions/`)
+   - Enable "Developer mode" (toggle in the top-right corner)
+   - Click "Load unpacked"
+   - Select the extracted folder containing the extension files
+
+4. **Start using it**:
+   - Navigate to any Jira ticket page
+   - Look for the 📋 button next to the ticket number
+   - Click it or press `Ctrl+J` to copy the markdown link!
+
+> **Note**: Keep the extracted folder on your computer. If you delete it, the extension will stop working and you'll need to reinstall it.
+
 ### Development Mode
 
 1. Clone this repository:
