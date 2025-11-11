@@ -32,7 +32,7 @@ A simple Chromium extension to copy Jira ticket numbers as embedded markdown lin
 
 > **Note**: Keep the extracted folder on your computer. If you delete it, the extension will stop working and you'll need to reinstall it.
 
-### Development Mode
+## Development
 
 1. Clone this repository:
    ```bash
@@ -55,6 +55,10 @@ A simple Chromium extension to copy Jira ticket numbers as embedded markdown lin
    - Enable "Developer mode"
    - Click "Load unpacked"
    - Select the `dist` folder from this project
+
+### Bump Version
+
+run `.\scripts\bump-version.ps1` to automatically update the version in both `manifest.json` and `package.json`.
 
 ## Usage
 
