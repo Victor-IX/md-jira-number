@@ -154,12 +154,12 @@ function injectCopyButton() {
   button.innerHTML = '📋';
   button.title = 'Copy as Markdown link (Ctrl+J)';
   button.style.cssText = `
-    margin-left: 8px;
-    padding: 4px 8px;
+    margin-left: 0px;
+    padding: 2px 4px;
     background-color: transparent;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     cursor: pointer;
     font-size: 14px;
     line-height: 1;
