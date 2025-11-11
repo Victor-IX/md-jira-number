@@ -1,0 +1,20 @@
+{
+  "name": "md-jira-number",
+  "version": "1.0.0",
+  "description": "A simple chromium extension to copy jira number as embedded markdown jira link",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js"
+  },
+  "keywords": ["jira", "markdown"],
+  "author": "Victor Chedeville",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,12 @@
+# Icons
+
+Place your extension icons here:
+- `icon16.png` - 16x16 pixels
+- `icon48.png` - 48x48 pixels
+- `icon128.png` - 128x128 pixels
+
+You can create simple icons using any image editor or use placeholder icons from:
+- https://www.flaticon.com/
+- https://icons8.com/
+
+For a quick start, you can use a simple colored square with "J" or "MD" text on it.
