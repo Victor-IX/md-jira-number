@@ -2,6 +2,8 @@
 
 A simple Chromium extension to copy Jira ticket numbers as embedded markdown links for use in commit descriptions and documentation.
 
+**Available on [Google Chrome Web Store](https://chromewebstore.google.com/detail/ejdaeniffapecgfioodfpadglkgpfkdl?utm_source=item-share-cb)**
+
 ## Features
 
 - 📋 **One-Click Copy**: Adds a button next to the Jira ticket number to copy it as a markdown link
