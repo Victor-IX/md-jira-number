@@ -1,47 +1,49 @@
 name: Build and Release Extension
 
 on:
-    release:
-        types: [created]
+  release:
+    types: [created]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "20"
-                  cache: "npm"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-            - name: Install dependencies
-              run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-            - name: Build extension
-              run: npm run build
+      - name: Build extension
+        run: npm run build
 
-            - name: Create release archive
-              run: |
-                  cd dist
-                  zip -r ../md-jira-number-${{ github.event.release.tag_name }}.zip .
-                  cd ..
+      - name: Create release archive
+        run: |
+          cd dist
+          zip -r ../md-jira-number-${{ github.event.release.tag_name }}.zip .
+          cd ..
 
-            - name: Upload release asset
-              uses: actions/upload-release-asset@v1
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ./md-jira-number-${{ github.event.release.tag_name }}.zip
-                  asset_name: md-jira-number-${{ github.event.release.tag_name }}.zip
-                  asset_content_type: application/zip
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./md-jira-number-${{ github.event.release.tag_name }}.zip
+          asset_name: md-jira-number-${{ github.event.release.tag_name }}.zip
+          asset_content_type: application/zip
 
-            - name: Upload dist folder as artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: extension-dist
-                  path: dist/
+      - name: Upload dist folder as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-dist
+          path: dist/
