@@ -1,6 +1,6 @@
 {
   "name": "md-jira-number",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple chromium extension to copy jira number as embedded markdown jira link",
   "scripts": {
     "build": "webpack --config webpack.config.js",
