@@ -1,12 +1,9 @@
 // Background service worker for handling keyboard shortcuts
 
-// Listen for keyboard commands
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'copy-markdown-link') {
-    // Get the active tab
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs[0]?.id) {
-        // Send message to content script
         chrome.tabs.sendMessage(
           tabs[0].id,
           { action: 'copyMarkdownLink' },
@@ -21,7 +18,6 @@ chrome.commands.onCommand.addListener((command) => {
   }
 });
 
-// Optional: Log when the extension is installed
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
     console.log('Jira Markdown Link Copier installed!');
